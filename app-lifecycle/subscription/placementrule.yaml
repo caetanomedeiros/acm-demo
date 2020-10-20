@@ -1,11 +1,11 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: fah-placement
-  namespace: fahclient
+  name: tasks-placement
+  namespace: tasks
   labels:
-    app: fahclient-centos8
+    app: tasks
 spec:
   clusterSelector:
     matchLabels: 
-      cloud: Azure
+      vendor: OpenShift

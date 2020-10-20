@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mapit
+  labels:
+    app: mapit
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mapit
+  template:
+    metadata:
+      labels:
+        app: mapit
+    spec:
+      containers:
+      - name: mapit
+        image: quay.io/thoraxe/mapit
+        ports:
+        - containerPort: 8080
+          
